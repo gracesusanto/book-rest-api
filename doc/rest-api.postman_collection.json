@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "5d4ca27c-85d8-4a36-9304-32c2fbe70c36",
+		"name": "Book REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28739061"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Create Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"John Doe\",\n    \"description\": \"This is a test book\",\n    \"edition\": \"First Edition\",\n    \"genre\": \"Fiction\",\n    \"published_at\": \"2023-01-01T00:00:00Z\",\n    \"title\": \"Test Book\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/book",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"book"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"author\": \"John Doe\",\n    \"description\": \"This is a test book\",\n    \"edition\": \"First Edition\",\n    \"genre\": \"Fiction\",\n    \"published_at\": \"2023-01-01T00:00:00Z\",\n    \"title\": \"Test Book\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/book",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"book"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 05:58:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": {\n        \"ID\": 5,\n        \"Title\": \"Test Book\",\n        \"Author\": \"John Doe\",\n        \"published_at\": \"2023-01-01T00:00:00Z\",\n        \"Edition\": \"First Edition\",\n        \"Description\": \"This is a test book\",\n        \"Genre\": \"Fiction\",\n        \"CreatedAt\": \"2023-07-24T22:58:36.667624-07:00\",\n        \"UpdatedAt\": \"2023-07-24T22:58:36.667624-07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/book/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"book",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Book",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/v1/book/5",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"book",
+										"5"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 05:59:06 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Show Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/book/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/v1/book/3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"book",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 05:59:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": {\n        \"ID\": 3,\n        \"Title\": \"New Title\",\n        \"Author\": \"New Author\",\n        \"published_at\": \"2023-07-06T17:00:00-07:00\",\n        \"Edition\": \"2\",\n        \"Description\": \"New Description\",\n        \"Genre\": \"New Genre\",\n        \"CreatedAt\": \"2023-07-24T22:39:11.85152-07:00\",\n        \"UpdatedAt\": \"2023-07-24T22:39:11.85152-07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/book?genre=&author=&start=2023-01-01&end=2023-12-12",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"book"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": ""
+								},
+								{
+									"key": "author",
+									"value": ""
+								},
+								{
+									"key": "start",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "end",
+									"value": "2023-12-12"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get List Book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/v1/book?genre=&author=&start=2023-01-01&end=2023-12-12",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"book"
+									],
+									"query": [
+										{
+											"key": "genre",
+											"value": ""
+										},
+										{
+											"key": "author",
+											"value": ""
+										},
+										{
+											"key": "start",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "end",
+											"value": "2023-12-12"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 05:59:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "845"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": [\n        {\n            \"ID\": 3,\n            \"Title\": \"New Title\",\n            \"Author\": \"New Author\",\n            \"published_at\": \"2023-07-06T17:00:00-07:00\",\n            \"Edition\": \"2\",\n            \"Description\": \"New Description\",\n            \"Genre\": \"New Genre\",\n            \"CreatedAt\": \"2023-07-24T22:39:11.85152-07:00\",\n            \"UpdatedAt\": \"2023-07-24T22:39:11.85152-07:00\"\n        },\n        {\n            \"ID\": 4,\n            \"Title\": \"New Title\",\n            \"Author\": \"New Author\",\n            \"published_at\": \"2023-07-06T17:00:00-07:00\",\n            \"Edition\": \"2\",\n            \"Description\": \"New Description\",\n            \"Genre\": \"New Genre\",\n            \"CreatedAt\": \"2023-07-24T22:39:20.805885-07:00\",\n            \"UpdatedAt\": \"2023-07-24T22:39:20.805885-07:00\"\n        },\n        {\n            \"ID\": 1,\n            \"Title\": \"patch title\",\n            \"Author\": \"New Author\",\n            \"published_at\": \"2023-07-06T17:00:00-07:00\",\n            \"Edition\": \"2\",\n            \"Description\": \"New Description\",\n            \"Genre\": \"New Genre\",\n            \"CreatedAt\": \"0000-12-31T16:07:02-07:52\",\n            \"UpdatedAt\": \"2023-07-24T22:54:50.91307-07:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Title\",\n    \"author\": \"New Author\",\n    \"published_at\": \"2023-07-07T00:00:00Z\",\n    \"edition\": \"2\",\n    \"description\": \"New Description\",\n    \"genre\": \"New Genre\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/book/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Book",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"New Title\",\n    \"author\": \"New Author\",\n    \"published_at\": \"2023-07-07T00:00:00Z\",\n    \"edition\": \"2\",\n    \"description\": \"New Description\",\n    \"genre\": \"New Genre\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/book/4",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"book",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:07:19 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": {\n        \"ID\": 4,\n        \"Title\": \"New Title\",\n        \"Author\": \"New Author\",\n        \"published_at\": \"2023-07-07T00:00:00Z\",\n        \"Edition\": \"2\",\n        \"Description\": \"New Description\",\n        \"Genre\": \"New Genre\",\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"2023-07-24T23:07:19.066831-07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Patch Book",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"patch title\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/v1/book/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Patch Book",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"new patch title\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/v1/book/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"book",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:00:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": {\n        \"ID\": 1,\n        \"Title\": \"new patch title\",\n        \"Author\": \"New Author\",\n        \"published_at\": \"2023-07-06T17:00:00-07:00\",\n        \"Edition\": \"2\",\n        \"Description\": \"New Description\",\n        \"Genre\": \"New Genre\",\n        \"CreatedAt\": \"0000-12-31T16:07:02-07:52\",\n        \"UpdatedAt\": \"2023-07-24T23:00:20.701413-07:00\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Collection",
+			"item": [
+				{
+					"name": "Create Collection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"collection - 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/collection",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"collection"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Collection",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"collection - 3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/collection",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"collection"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:00:31 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": {\n        \"ID\": 3,\n        \"Name\": \"collection - 3\",\n        \"Books\": null,\n        \"CreatedAt\": \"2023-07-24T23:00:31.79511-07:00\",\n        \"UpdatedAt\": \"2023-07-24T23:00:31.79511-07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show Collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/collections/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"collections",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/v1/collection/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"collection",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:00:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "982"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": {\n        \"ID\": 1,\n        \"Name\": \"new collection\",\n        \"Books\": [\n            {\n                \"ID\": 1,\n                \"Title\": \"new patch title\",\n                \"Author\": \"New Author\",\n                \"published_at\": \"2023-07-06T17:00:00-07:00\",\n                \"Edition\": \"2\",\n                \"Description\": \"New Description\",\n                \"Genre\": \"New Genre\",\n                \"CreatedAt\": \"0000-12-31T16:07:02-07:52\",\n                \"UpdatedAt\": \"2023-07-24T23:00:20.701413-07:00\"\n            },\n            {\n                \"ID\": 3,\n                \"Title\": \"New Title\",\n                \"Author\": \"New Author\",\n                \"published_at\": \"2023-07-06T17:00:00-07:00\",\n                \"Edition\": \"2\",\n                \"Description\": \"New Description\",\n                \"Genre\": \"New Genre\",\n                \"CreatedAt\": \"2023-07-24T22:39:11.85152-07:00\",\n                \"UpdatedAt\": \"2023-07-24T22:39:11.85152-07:00\"\n            },\n            {\n                \"ID\": 3,\n                \"Title\": \"New Title\",\n                \"Author\": \"New Author\",\n                \"published_at\": \"2023-07-06T17:00:00-07:00\",\n                \"Edition\": \"2\",\n                \"Description\": \"New Description\",\n                \"Genre\": \"New Genre\",\n                \"CreatedAt\": \"2023-07-24T22:39:11.85152-07:00\",\n                \"UpdatedAt\": \"2023-07-24T22:39:11.85152-07:00\"\n            }\n        ],\n        \"CreatedAt\": \"2023-07-24T22:41:59.98447-07:00\",\n        \"UpdatedAt\": \"2023-07-24T22:51:11.947499-07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Collection",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"new collection\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/collection/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"collection",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Collection",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"new collection - 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/collection/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"collection",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:00:53 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "986"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": {\n        \"ID\": 1,\n        \"Name\": \"new collection - 1\",\n        \"Books\": [\n            {\n                \"ID\": 1,\n                \"Title\": \"new patch title\",\n                \"Author\": \"New Author\",\n                \"published_at\": \"2023-07-06T17:00:00-07:00\",\n                \"Edition\": \"2\",\n                \"Description\": \"New Description\",\n                \"Genre\": \"New Genre\",\n                \"CreatedAt\": \"0000-12-31T16:07:02-07:52\",\n                \"UpdatedAt\": \"2023-07-24T23:00:20.701413-07:00\"\n            },\n            {\n                \"ID\": 3,\n                \"Title\": \"New Title\",\n                \"Author\": \"New Author\",\n                \"published_at\": \"2023-07-06T17:00:00-07:00\",\n                \"Edition\": \"2\",\n                \"Description\": \"New Description\",\n                \"Genre\": \"New Genre\",\n                \"CreatedAt\": \"2023-07-24T22:39:11.85152-07:00\",\n                \"UpdatedAt\": \"2023-07-24T22:39:11.85152-07:00\"\n            },\n            {\n                \"ID\": 3,\n                \"Title\": \"New Title\",\n                \"Author\": \"New Author\",\n                \"published_at\": \"2023-07-06T17:00:00-07:00\",\n                \"Edition\": \"2\",\n                \"Description\": \"New Description\",\n                \"Genre\": \"New Genre\",\n                \"CreatedAt\": \"2023-07-24T22:39:11.85152-07:00\",\n                \"UpdatedAt\": \"2023-07-24T22:39:11.85152-07:00\"\n            }\n        ],\n        \"CreatedAt\": \"2023-07-24T22:41:59.98447-07:00\",\n        \"UpdatedAt\": \"2023-07-24T23:00:53.339325-07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Collection",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/collection/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"collection",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Collection",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/v1/collection/3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"collection",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:01:01 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Add Book To Collection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/v1/collection/1/book",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"collection",
+								"1",
+								"book"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Book To Collection",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"book_id\" : 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/v1/collection/1/book",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"collection",
+										"1",
+										"book"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:01:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Book From Collection",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book_id\" : 3\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/v1/collection/1/book",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"collection",
+								"1",
+								"book"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove Book From Collection",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"book_id\" : 1\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/v1/collection/1/book",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"collection",
+										"1",
+										"book"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:05:46 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Show Book Of Collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/v1/collection/1/book",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"collection",
+								"1",
+								"book"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show Book Of Collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/v1/collection/1/book",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"collection",
+										"1",
+										"book"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 06:06:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"sync\",\n    \"status\": \"Success\",\n    \"status_code\": 200,\n    \"error_code\": 0,\n    \"error\": \"\",\n    \"message\": [\n        {\n            \"ID\": 3,\n            \"Title\": \"new patch title\",\n            \"Author\": \"New Author\",\n            \"published_at\": \"2023-07-06T17:00:00-07:00\",\n            \"Edition\": \"2\",\n            \"Description\": \"New Description\",\n            \"Genre\": \"New Genre\",\n            \"CreatedAt\": \"2023-07-24T22:39:11.85152-07:00\",\n            \"UpdatedAt\": \"2023-07-24T23:06:48.589317-07:00\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
